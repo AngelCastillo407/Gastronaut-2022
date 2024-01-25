@@ -20,7 +20,6 @@ public class Gas : MonoBehaviour
     {
         if (gas > 0.05f)
         {
-            Debug.Log(gas);
             gas = gas - 0.05f;
         }
     }

@@ -7,6 +7,11 @@ public class GasGauge : MonoBehaviour
 {
     private Gas playerGas = new Gas();
 
+    public int getRotationValue()
+    {
+        return playerGas.GetGas();
+    }
+
     // Update is called once per frame
     void Update()
     {
