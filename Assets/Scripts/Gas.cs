@@ -5,6 +5,7 @@ using UnityEngine;
 public class Gas : MonoBehaviour
 {
     private float gas = 100f;
+    private float gasDecrease = 0.01f;
 
     public int GetGas()
     {
@@ -18,9 +19,9 @@ public class Gas : MonoBehaviour
 
     public void decreaseGas()
     {
-        if (gas > 0.05f)
+        if (gas > gasDecrease)
         {
-            gas = gas - 0.05f;
+            gas = gas - gasDecrease;
         }
     }
 }

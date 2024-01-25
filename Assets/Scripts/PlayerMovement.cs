@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     Gas playerGas = new Gas();
+    public ParticleSystem fart;
 
     void leanForward()
     {
@@ -107,6 +108,16 @@ public class PlayerMovement : MonoBehaviour
         {
             playerGas.decreaseGas();
             relativeFart();
+        }
+
+        if (Input.GetKeyDown("space") && (playerGas.GetGas() > 0))
+        {
+            fart.Play();
+        }
+
+        if (Input.GetKeyUp("space"))
+        {
+            fart.Stop();
         }
     }
 }
