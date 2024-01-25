@@ -58,7 +58,6 @@ public class PlayerMovement : MonoBehaviour
     {
         // Apply 15 force in current y direction
         GetComponent<Rigidbody>().AddRelativeForce(0, 15, 0);
-        Debug.Log("Im being clicked!");
     }
 
     void leanForwardSlow()
