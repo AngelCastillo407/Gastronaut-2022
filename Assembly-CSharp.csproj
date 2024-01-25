@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FC79043E-D588-2638-0602-04363465076C}</ProjectGuid>
+    <ProjectGuid>{B9FF3854-D326-794C-ACCB-01F2FE443B14}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,7 +57,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\GasGauge.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\ArrowRotation2.cs" />
     <Compile Include="Assets\Scripts\Gas.cs" />
+    <Compile Include="Assets\Scripts\ArrowRotation.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
