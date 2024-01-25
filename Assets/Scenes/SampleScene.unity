@@ -941,6 +941,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 586228516}
     m_Modifications:
+    - target: {fileID: 777493005552659850, guid: fe0579f32263d9b41b1a83461f540231,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 574e89f432bfa3741be69a5928e76c40, type: 2}
     - target: {fileID: 2108773851872190993, guid: fe0579f32263d9b41b1a83461f540231,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1006,6 +1011,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5958681563403079111, guid: fe0579f32263d9b41b1a83461f540231,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 574e89f432bfa3741be69a5928e76c40, type: 2}
+    - target: {fileID: 6432265639590200045, guid: fe0579f32263d9b41b1a83461f540231,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 574e89f432bfa3741be69a5928e76c40, type: 2}
     - target: {fileID: 6520852086180508237, guid: fe0579f32263d9b41b1a83461f540231,
         type: 3}
       propertyPath: looping
@@ -1036,6 +1051,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Placeholder Gastronaut
       objectReference: {fileID: 0}
+    - target: {fileID: 8500130415277677894, guid: fe0579f32263d9b41b1a83461f540231,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 574e89f432bfa3741be69a5928e76c40, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
