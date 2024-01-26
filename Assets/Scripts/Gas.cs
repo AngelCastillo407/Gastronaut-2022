@@ -5,7 +5,7 @@ using UnityEngine;
 public class Gas : MonoBehaviour
 {
     private float gas = 100f;
-    private float gasDecrease = 0.05f;
+    private float gasDecrease = 0.01f;
 
     public int GetGas()
     {
