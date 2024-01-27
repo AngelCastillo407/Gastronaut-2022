@@ -84,22 +84,22 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("up"))
+        if (Input.GetKey("up") || Input.GetKey("w"))
         {
             leanForwardSlow();
         }
 
-        if (Input.GetKey("down"))
+        if (Input.GetKey("down") || Input.GetKey("s"))
         {
             leanBackwardSlow();
         }
 
-        if(Input.GetKey("left"))
+        if(Input.GetKey("left") || Input.GetKey("a"))
         {
             leanLeftSlow();
         }
 
-        if (Input.GetKey("right"))
+        if (Input.GetKey("right") || Input.GetKey("d"))
         {
             leanRightSlow();
         }

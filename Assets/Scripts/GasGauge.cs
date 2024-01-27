@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GasGauge : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class GasGauge : MonoBehaviour
         if (Input.GetKey("space"))
         {
             playerGas.decreaseGas();
-            GetComponent<Text>().text = playerGas.GetGas().ToString() + "%";
+            GetComponent<TextMeshPro>().text = playerGas.GetGas().ToString() + "%";
         }
     }
 }
