@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
     private Gas playerGas = new Gas();
-    public ParticleSystem fart;
+    const int GAS_INCREASE_FROM_BEANS = 40;
 
     public GameObject randomObject;
     private Vector3 myRandomObjectPosition;
+    public ParticleSystem fart;
 
     void leanForward()
     {
@@ -130,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (randomObject.GetComponent<Rigidbody>().transform.position != myRandomObjectPosition)
         {
-            playerGas.addGas(33);
+            playerGas.addGas(GAS_INCREASE_FROM_BEANS);
             myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
         }
     }

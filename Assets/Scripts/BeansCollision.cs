@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class BeansCollision : MonoBehaviour
 {
-    public GameObject canOfBeans;
-    public GameObject randomObject;
+    public GameObject canOfBeans, randomObject;
     private Vector3 randomObjectPosition;
 
     void Start()
@@ -13,7 +12,7 @@ public class BeansCollision : MonoBehaviour
         randomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
     }
 
-    //Upon collision with another GameObject, this GameObject will reverse direction
+    // Upon collision with another GameObject, this GameObject will reverse direction
     private void OnTriggerEnter(Collider other)
     {
         canOfBeans.GetComponent<MeshRenderer>().enabled = false;

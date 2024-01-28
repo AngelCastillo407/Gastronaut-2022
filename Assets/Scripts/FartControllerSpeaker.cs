@@ -7,11 +7,13 @@ public class FartControllerSpeaker : MonoBehaviour
 
     private Gas playerGas = new Gas();
     private bool isFarting = false;
-    private int randomNumber;
-    public Animator animator;
+    private const int GAS_INCREASE_FROM_BEANS = 40;
 
+    public Animator animator;
     public GameObject randomObject;
+
     private Vector3 myRandomObjectPosition;
+    private int randomNumber;
 
     void doneFarting()
     {
@@ -70,7 +72,7 @@ public class FartControllerSpeaker : MonoBehaviour
 
         if (randomObject.GetComponent<Rigidbody>().transform.position != myRandomObjectPosition)
         {
-            playerGas.addGas(33);
+            playerGas.addGas(GAS_INCREASE_FROM_BEANS);
             myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
         }
 
