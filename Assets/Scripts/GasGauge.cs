@@ -6,10 +6,12 @@ using TMPro;
 
 public class GasGauge : MonoBehaviour
 {
-    public GameObject randomObject;
-    private Vector3 myRandomObjectPosition;
 
     private Gas playerGas = new Gas();
+    private const int GAS_INCREASE_FROM_BEANS = 40;
+
+    public GameObject randomObject;
+    private Vector3 myRandomObjectPosition;
 
     void Start()
     {
@@ -27,7 +29,7 @@ public class GasGauge : MonoBehaviour
 
         if (randomObject.GetComponent<Rigidbody>().transform.position.x != myRandomObjectPosition.x)
         {
-            playerGas.addGas(33);
+            playerGas.addGas(GAS_INCREASE_FROM_BEANS);
             GetComponent<TextMeshPro>().text = playerGas.GetGas().ToString() + "%";
             myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
         }

@@ -1,0 +1,1051 @@
+fileFormatVersion: 2
+guid: 35ba954c80318df498d2602a755eab53
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: party-popper_1f389_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3064
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d6bf5ccdce2134bba84bef01d95e5d
+      internalID: 1051329293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 3064
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece12c468e30b5641892ed67d4b713af
+      internalID: 1978697750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 3064
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df55ec70a68b5441ae1463319cbbd9d
+      internalID: -1549311663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 3064
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56585846494fe8546aaccd37bea5afb2
+      internalID: -882054720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_4
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 3064
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4fbc0a884380ce42a95ded48870f20b
+      internalID: -1467018963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_5
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 3064
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960cdf0e2b0b6a146a6193816392ac87
+      internalID: 2136168143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_6
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3064
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba497dee5851f1d4f996815790863464
+      internalID: 96294032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2544
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de053f41e85b3e649aab8382f3c642a9
+      internalID: 414073589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_8
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 2544
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110d933ef8e43d3458d1e73567254341
+      internalID: -1354994027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_9
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2544
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d558aa9b7a6894ea4a16e88d6345b5
+      internalID: 1524212719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_10
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 2544
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d24da6efd2ab364892a16801a339d71
+      internalID: -1387855962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_11
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2544
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bbce0bf387fdd14ba5521746043718f
+      internalID: -130494964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_12
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 2544
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ddee92647e7fda47966e0e93ad4addb
+      internalID: -919669511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_13
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2544
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88926a796b1de1741b37c835258f922f
+      internalID: 148618457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2024
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83cc789635a533d41981c48fd40f96e7
+      internalID: 1147697611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_15
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 2024
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd51c6d41631ed9458d7f5fd3785b63c
+      internalID: 371898100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_16
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2024
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51989b1411d0764aab8305263fc07f1
+      internalID: -1641998282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_17
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 2024
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e136fe34ed0c1a42b159e3e90846678
+      internalID: 1274836068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_18
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2024
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8ab474150a44b409017aa4a89398e5
+      internalID: -1943660824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_19
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 2024
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e5fd5fefc6f2e49962d06b874bd967
+      internalID: 92693375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_20
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2024
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06d8612b7d325840a7c05d2cff5dfb6
+      internalID: -1520090947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1504
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c7f939a5690574a99fff5b3c79fff2
+      internalID: -1455490521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_22
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1504
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58903161a53f2df47bcd1dfa32efc5e9
+      internalID: -878486421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_23
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1504
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d636280fef1b0408dbe05393c9352e
+      internalID: 1327480221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_24
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1504
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f6e5b4cac243a2439fe40d4701d1476
+      internalID: -1288891444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_25
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1504
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe7eef79922bc2a4c9a28c24e076aba5
+      internalID: 2142911240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_26
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1504
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254f10ddfbe5c534b845b422ae871408
+      internalID: -579319240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_27
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1504
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 739e7d493c4ae8f4a952cf9a8bab73ce
+      internalID: 543638386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 984
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832a97a7153e7b14d8684d2a4357773c
+      internalID: -75973460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_29
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 984
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b75ad0423687d41bead5cfc8dc7b83
+      internalID: -402954818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_30
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 984
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad50212ca41bd7c4fb041c07816c9846
+      internalID: 443746435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_31
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 984
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ee95639e1c95b4495bc34003119800
+      internalID: 144387134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_32
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 984
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9c4fc94a1e4b347a7d4628cad357d8
+      internalID: 99111083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_33
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 984
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab4d481cb47bc449a273364eefa5ee2
+      internalID: 470179682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_34
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 984
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c1b8f8102b400488ee884221a32d62
+      internalID: 169075939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51afbcd464af92440a463cc0f31949c1
+      internalID: 1165141744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_36
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 464
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00da1265bc369b49ba5e7921a47733e
+      internalID: -1285938275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_37
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 464
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e296fd1c59f61f4a8a9e020bf07fa2f
+      internalID: 1228838127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_38
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 464
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25064dd595a9a8459f66e94ff94eef1
+      internalID: 633433668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_39
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 464
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b9df0d9956203e478ab078c4c6fcb4c
+      internalID: -1683733383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_40
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 464
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60327102ce8f3645b2dc7635ddf6a81
+      internalID: 696829032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party-popper_1f389_41
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 464
+        width: 500
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d7502f202309b46b611365f8d33c40
+      internalID: 835996844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ad2040b53e6e1c640bd577590fb1d166
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      party-popper_1f389_0: 1051329293
+      party-popper_1f389_1: 1978697750
+      party-popper_1f389_10: -1387855962
+      party-popper_1f389_11: -130494964
+      party-popper_1f389_12: -919669511
+      party-popper_1f389_13: 148618457
+      party-popper_1f389_14: 1147697611
+      party-popper_1f389_15: 371898100
+      party-popper_1f389_16: -1641998282
+      party-popper_1f389_17: 1274836068
+      party-popper_1f389_18: -1943660824
+      party-popper_1f389_19: 92693375
+      party-popper_1f389_2: -1549311663
+      party-popper_1f389_20: -1520090947
+      party-popper_1f389_21: -1455490521
+      party-popper_1f389_22: -878486421
+      party-popper_1f389_23: 1327480221
+      party-popper_1f389_24: -1288891444
+      party-popper_1f389_25: 2142911240
+      party-popper_1f389_26: -579319240
+      party-popper_1f389_27: 543638386
+      party-popper_1f389_28: -75973460
+      party-popper_1f389_29: -402954818
+      party-popper_1f389_3: -882054720
+      party-popper_1f389_30: 443746435
+      party-popper_1f389_31: 144387134
+      party-popper_1f389_32: 99111083
+      party-popper_1f389_33: 470179682
+      party-popper_1f389_34: 169075939
+      party-popper_1f389_35: 1165141744
+      party-popper_1f389_36: -1285938275
+      party-popper_1f389_37: 1228838127
+      party-popper_1f389_38: 633433668
+      party-popper_1f389_39: -1683733383
+      party-popper_1f389_4: -1467018963
+      party-popper_1f389_40: 696829032
+      party-popper_1f389_41: 835996844
+      party-popper_1f389_5: 2136168143
+      party-popper_1f389_6: 96294032
+      party-popper_1f389_7: 414073589
+      party-popper_1f389_8: -1354994027
+      party-popper_1f389_9: 1524212719
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

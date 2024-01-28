@@ -377,6 +377,7 @@
 "Assets/Scripts/GasGauge.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/ThirdPersonOrbitCamBasic.cs"
+"Assets/Scripts/VictoryCollision.cs"
 -langversion:9.0
 
 /deterministic

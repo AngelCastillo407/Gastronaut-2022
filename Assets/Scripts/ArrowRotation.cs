@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class ArrowRotation : MonoBehaviour
 {
+
     private Gas playerGas = new Gas();
-    private float[] possibleDegrees;
+    const int GAS_INCREASE_FROM_BEANS = 40;
 
     public GameObject randomObject;
     private Vector3 myRandomObjectPosition;
-   
+    private float[] possibleDegrees;
+
     float[] initRotationRange()
     {
         int x = 0;
@@ -41,7 +43,7 @@ public class ArrowRotation : MonoBehaviour
         if (Input.GetKey("space") && (playerGas.GetGas() > 0))
         {
             playerGas.decreaseGas();
-            // Looks like extra if statement but actually serves a purpose 
+            // Looks like extra if-statement but actually serves a purpose 
             // Sometimes with floats you subtract by something like 1.001 giving you a negative number
             if (playerGas.GetGas() > 0)
             {
@@ -51,7 +53,7 @@ public class ArrowRotation : MonoBehaviour
 
         if (randomObject.GetComponent<Rigidbody>().transform.position != myRandomObjectPosition)
         {
-            playerGas.addGas(33);
+            playerGas.addGas(GAS_INCREASE_FROM_BEANS);
             GetComponent<RectTransform>().transform.rotation = Quaternion.Euler(0, 0, possibleDegrees[playerGas.GetGas() - 1]);
             myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
         }
