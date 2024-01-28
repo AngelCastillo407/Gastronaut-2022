@@ -6,6 +6,9 @@ public class ArrowRotation : MonoBehaviour
 {
     private Gas playerGas = new Gas();
     private float[] possibleDegrees;
+
+    public GameObject randomObject;
+    private Vector3 myRandomObjectPosition;
    
     float[] initRotationRange()
     {
@@ -21,16 +24,20 @@ public class ArrowRotation : MonoBehaviour
         }
         return possibleDegrees;
     }
+
     // 68.6, 53.2, 37.8
     void Start()
     {
-         possibleDegrees = initRotationRange();
-         GetComponent<RectTransform>().transform.rotation = Quaternion.Euler(0, 0, possibleDegrees[playerGas.GetGas() - 1]);
+        possibleDegrees = initRotationRange();
+        GetComponent<RectTransform>().transform.rotation = Quaternion.Euler(0, 0, possibleDegrees[playerGas.GetGas() - 1]);
+        myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKey("space") && (playerGas.GetGas() > 0))
         {
             playerGas.decreaseGas();
@@ -41,6 +48,13 @@ public class ArrowRotation : MonoBehaviour
                 GetComponent<RectTransform>().transform.rotation = Quaternion.Euler(0, 0, possibleDegrees[playerGas.GetGas() - 1]);
             }
         }
-        
+
+        if (randomObject.GetComponent<Rigidbody>().transform.position != myRandomObjectPosition)
+        {
+            playerGas.addGas(33);
+            GetComponent<RectTransform>().transform.rotation = Quaternion.Euler(0, 0, possibleDegrees[playerGas.GetGas() - 1]);
+            myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
+        }
+
     }
 }

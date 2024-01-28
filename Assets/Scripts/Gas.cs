@@ -17,6 +17,19 @@ public class Gas : MonoBehaviour
         gas = value;
     }
 
+    public void addGas(int value)
+    {
+        float convertedValue = (float) value;
+        if (gas + convertedValue > 100f)
+        {
+            gas = 100f;
+        }
+        else
+        {
+            gas += convertedValue;
+        }
+    }
+
     public void decreaseGas()
     {
         if (gas > gasDecrease)

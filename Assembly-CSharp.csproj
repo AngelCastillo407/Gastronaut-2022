@@ -56,11 +56,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GasGauge.cs" />
-    <Compile Include="Assets\FartControllerSpeaker.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\BeansCollision.cs" />
     <Compile Include="Assets\Scripts\ArrowRotation2.cs" />
     <Compile Include="Assets\Scripts\Gas.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonOrbitCamBasic.cs" />
+    <Compile Include="Assets\Scripts\FartControllerSpeaker.cs" />
     <Compile Include="Assets\Scripts\ArrowRotation.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
   </ItemGroup>

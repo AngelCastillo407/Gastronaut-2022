@@ -6,11 +6,14 @@ using TMPro;
 
 public class GasGauge : MonoBehaviour
 {
+    public GameObject randomObject;
+    private Vector3 myRandomObjectPosition;
+
     private Gas playerGas = new Gas();
 
-    public int getRotationValue()
+    void Start()
     {
-        return playerGas.GetGas();
+        myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
     }
 
     // Update is called once per frame
@@ -20,6 +23,13 @@ public class GasGauge : MonoBehaviour
         {
             playerGas.decreaseGas();
             GetComponent<TextMeshPro>().text = playerGas.GetGas().ToString() + "%";
+        }
+
+        if (randomObject.GetComponent<Rigidbody>().transform.position.x != myRandomObjectPosition.x)
+        {
+            playerGas.addGas(33);
+            GetComponent<TextMeshPro>().text = playerGas.GetGas().ToString() + "%";
+            myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
         }
     }
 }

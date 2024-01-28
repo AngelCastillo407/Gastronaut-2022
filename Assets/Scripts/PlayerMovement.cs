@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Gas playerGas = new Gas();
+    private Gas playerGas = new Gas();
     public ParticleSystem fart;
+
+    public GameObject randomObject;
+    private Vector3 myRandomObjectPosition;
 
     void leanForward()
     {
         var x = 0;
         for (x = 0; x < 90; x++) 
-{
+        {
             GetComponent<Rigidbody>().transform.Rotate(x, 0f, 0f, Space.Self);
         }
     }
@@ -81,6 +84,11 @@ public class PlayerMovement : MonoBehaviour
         GetComponent<Rigidbody>().transform.Rotate(0f, 0f, -0.5f, Space.Self);
     }
 
+    void Start()
+    {
+        myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -118,6 +126,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyUp("space"))
         {
             fart.Stop();
+        }
+
+        if (randomObject.GetComponent<Rigidbody>().transform.position != myRandomObjectPosition)
+        {
+            playerGas.addGas(33);
+            myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
         }
     }
 }
