@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
     private Gas playerGas = new Gas();
-    public ParticleSystem fart;
+    const int GAS_INCREASE_FROM_BEANS = 40;
 
     public GameObject randomObject;
     private Vector3 myRandomObjectPosition;
+    private Quaternion myRandomObjectRotation;
+    public ParticleSystem fart;
+
+    public bool gameHasToReset = false;
 
     void leanForward()
     {
@@ -87,11 +92,27 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
+        myRandomObjectRotation = randomObject.GetComponent<Rigidbody>().rotation;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (! (playerGas.GetGas() > 0))
+        {
+            gameHasToReset = true;
+        }
+
+        if (gameHasToReset)
+        {
+            if (randomObject.GetComponent<Transform>().rotation != myRandomObjectRotation)
+            {
+                playerGas.setGas(100f);
+                transform.position = new Vector3(0, 0, 0);
+                gameHasToReset = false;
+            }
+        }
+
         if (Input.GetKey("up") || Input.GetKey("w"))
         {
             leanForwardSlow();
@@ -112,25 +133,25 @@ public class PlayerMovement : MonoBehaviour
             leanRightSlow();
         }
 
-        if (Input.GetKey("space") && (playerGas.GetGas() > 0))
+        if (Input.GetKey("space") && (playerGas.GetGas() > 0) && !gameHasToReset)
         {
             playerGas.decreaseGas();
             relativeFart();
         }
 
-        if (Input.GetKeyDown("space") && (playerGas.GetGas() > 0))
+        if (Input.GetKeyDown("space") && (playerGas.GetGas() > 0) && !gameHasToReset)
         {
             fart.Play();
         }
 
-        if (Input.GetKeyUp("space"))
+        if (Input.GetKeyUp("space") || gameHasToReset)
         {
             fart.Stop();
         }
 
         if (randomObject.GetComponent<Rigidbody>().transform.position != myRandomObjectPosition)
         {
-            playerGas.addGas(33);
+            playerGas.addGas(GAS_INCREASE_FROM_BEANS);
             myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
         }
     }

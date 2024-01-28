@@ -5,7 +5,12 @@ using UnityEngine;
 public class Gas : MonoBehaviour
 {
     private float gas = 100f;
-    private float gasDecrease = 0.01f;
+
+    // Normal Gas
+    private float gasDecrease = 0.015f;
+    
+    // Infinite Gas
+    // private float gasDecrease = 0.0001f;
 
     public int GetGas()
     {
@@ -35,6 +40,10 @@ public class Gas : MonoBehaviour
         if (gas > gasDecrease)
         {
             gas = gas - gasDecrease;
+        }
+        else
+        {
+            gas = 0f;
         }
     }
 }
