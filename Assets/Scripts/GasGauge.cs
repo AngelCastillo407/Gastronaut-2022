@@ -13,14 +13,33 @@ public class GasGauge : MonoBehaviour
     public GameObject randomObject;
     private Vector3 myRandomObjectPosition;
 
+    private Vector3 myRandomObjectScale;
+    private bool gameHasToReset;
+
     void Start()
     {
         myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
+        myRandomObjectScale = randomObject.GetComponent<Rigidbody>().transform.localScale;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (!(playerGas.GetGas() > 0))
+        {
+            gameHasToReset = true;
+        }
+
+        if (gameHasToReset)
+        {
+            if (randomObject.GetComponent<Transform>().localScale != myRandomObjectScale)
+            {
+                playerGas.setGas(100f);
+                gameHasToReset = false;
+            }
+        }
+
         if (Input.GetKey("space"))
         {
             playerGas.decreaseGas();

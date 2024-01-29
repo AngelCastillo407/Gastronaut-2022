@@ -15,6 +15,11 @@ public class FartControllerSpeaker : MonoBehaviour
     private Vector3 myRandomObjectPosition;
     private int randomNumber;
 
+    private Vector3 myRandomObjectScale;
+    private bool gameHasToReset;
+
+    public GameObject RestartButton;
+
     void doneFarting()
     {
         isFarting = false;
@@ -24,11 +29,43 @@ public class FartControllerSpeaker : MonoBehaviour
     void Start()
     {
         myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
+        myRandomObjectScale = randomObject.GetComponent<Rigidbody>().transform.localScale;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (!(playerGas.GetGas() > 0))
+        {
+            gameHasToReset = true;
+            animator.SetTrigger("RanOutOfGas");
+        }
+
+        if (gameHasToReset)
+        {
+            //if (randomObject.GetComponent<Transform>().localScale != myRandomObjectScale)
+            //{
+            //    playerGas.setGas(100f);
+            //    gameHasToReset = false;
+            //    doneFarting();
+            //}
+
+            
+            if (RestartButton.GetComponent<Transform>().localScale != myRandomObjectScale)
+            {
+                if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+                {
+                    RestartButton.SetActive(true);
+                    playerGas.setGas(100f);
+                    gameHasToReset = false;
+                    doneFarting();
+                    animator.ResetTrigger("RanOutOfGas");
+                }
+            }
+
+            Debug.Log("woohoo");
+        }
 
         if (Input.GetKey("space") && (playerGas.GetGas() > 0))
         {

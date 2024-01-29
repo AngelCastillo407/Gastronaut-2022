@@ -10,10 +10,13 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject randomObject;
     private Vector3 myRandomObjectPosition;
-    private Quaternion myRandomObjectRotation;
+    private Vector3 myRandomObjectScale;
     public ParticleSystem fart;
+    public GameObject RestartButton;
 
     public bool gameHasToReset = false;
+
+    //public AudioSource one;
 
     void leanForward()
     {
@@ -71,33 +74,42 @@ public class PlayerMovement : MonoBehaviour
 
     void leanForwardSlow()
     {
-        GetComponent<Rigidbody>().transform.Rotate(0.5f, 0f, 0f, Space.Self);
+        GetComponent<Rigidbody>().transform.Rotate(1.5f, 0f, 0f, Space.Self);
     }
 
     void leanBackwardSlow()
     {
-        GetComponent<Rigidbody>().transform.Rotate(-0.5f, 0f, 0f, Space.Self);
+        GetComponent<Rigidbody>().transform.Rotate(-1.5f, 0f, 0f, Space.Self);
     }
 
     void leanLeftSlow()
     {
-        GetComponent<Rigidbody>().transform.Rotate(0f, 0f, 0.5f, Space.Self);
+        GetComponent<Rigidbody>().transform.Rotate(0f, 0f, 1.5f, Space.Self);
     }
 
     void leanRightSlow()
     {
-        GetComponent<Rigidbody>().transform.Rotate(0f, 0f, -0.5f, Space.Self);
+        GetComponent<Rigidbody>().transform.Rotate(0f, 0f, -1.5f, Space.Self);
     }
 
     void Start()
     {
         myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
-        myRandomObjectRotation = randomObject.GetComponent<Rigidbody>().rotation;
+        myRandomObjectScale = randomObject.GetComponent<Rigidbody>().transform.localScale;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //if (Input.GetKey("space"))
+        //{
+        //    one.Play();
+        //}
+        //else
+        //{
+        //    one.Stop();
+        //}
+
         if (! (playerGas.GetGas() > 0))
         {
             gameHasToReset = true;
@@ -105,12 +117,23 @@ public class PlayerMovement : MonoBehaviour
 
         if (gameHasToReset)
         {
-            if (randomObject.GetComponent<Transform>().rotation != myRandomObjectRotation)
+            RestartButton.SetActive(true);
+            //if (randomObject.GetComponent<Transform>().localScale != myRandomObjectScale)
+            //{
+            //    playerGas.setGas(100f);
+            //    transform.position = new Vector3(0, 0, 0);
+            //    gameHasToReset = false;
+            //    RestartButton.SetActive(false);
+            //}
+
+            if (randomObject.GetComponent<Transform>().localScale != myRandomObjectScale)
             {
                 playerGas.setGas(100f);
-                transform.position = new Vector3(0, 0, 0);
                 gameHasToReset = false;
+                transform.position = new Vector3(0, 0, 0);
             }
+
+
         }
 
         if (Input.GetKey("up") || Input.GetKey("w"))
