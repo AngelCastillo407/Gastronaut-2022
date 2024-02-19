@@ -12,6 +12,9 @@ public class ArrowRotation : MonoBehaviour
     private Vector3 myRandomObjectPosition;
     private float[] possibleDegrees;
 
+    private Vector3 myRandomObjectScale;
+    private bool gameHasToReset;
+
     float[] initRotationRange()
     {
         int x = 0;
@@ -33,12 +36,26 @@ public class ArrowRotation : MonoBehaviour
         possibleDegrees = initRotationRange();
         GetComponent<RectTransform>().transform.rotation = Quaternion.Euler(0, 0, possibleDegrees[playerGas.GetGas() - 1]);
         myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
-
+        myRandomObjectScale = randomObject.GetComponent<Rigidbody>().transform.localScale;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!(playerGas.GetGas() > 0))
+        {
+            gameHasToReset = true;
+        }
+
+        if (gameHasToReset)
+        {
+            if (randomObject.GetComponent<Transform>().localScale != myRandomObjectScale)
+            {
+                playerGas.setGas(100f);
+                GetComponent<RectTransform>().transform.rotation = Quaternion.Euler(0, 0, possibleDegrees[99]);
+                gameHasToReset = false;
+            }
+        }
 
         if (Input.GetKey("space") && (playerGas.GetGas() > 0))
         {

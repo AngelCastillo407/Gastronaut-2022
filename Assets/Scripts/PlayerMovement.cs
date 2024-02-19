@@ -10,7 +10,16 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject randomObject;
     private Vector3 myRandomObjectPosition;
+    private Vector3 myRandomObjectScale;
     public ParticleSystem fart;
+    public GameObject RestartButton;
+
+    public bool gameHasToReset = false;
+
+    // Original speed is 0.5f
+    private float rotationSpeed = 2.5f;
+
+    //public AudioSource one;
 
     void leanForward()
     {
@@ -68,32 +77,56 @@ public class PlayerMovement : MonoBehaviour
 
     void leanForwardSlow()
     {
-        GetComponent<Rigidbody>().transform.Rotate(0.5f, 0f, 0f, Space.Self);
+        GetComponent<Rigidbody>().transform.Rotate(rotationSpeed, 0f, 0f, Space.Self);
     }
 
     void leanBackwardSlow()
     {
-        GetComponent<Rigidbody>().transform.Rotate(-0.5f, 0f, 0f, Space.Self);
+        GetComponent<Rigidbody>().transform.Rotate(-rotationSpeed, 0f, 0f, Space.Self);
     }
 
     void leanLeftSlow()
     {
-        GetComponent<Rigidbody>().transform.Rotate(0f, 0f, 0.5f, Space.Self);
+        GetComponent<Rigidbody>().transform.Rotate(0f, 0f, rotationSpeed, Space.Self);
     }
 
     void leanRightSlow()
     {
-        GetComponent<Rigidbody>().transform.Rotate(0f, 0f, -0.5f, Space.Self);
+        GetComponent<Rigidbody>().transform.Rotate(0f, 0f, -rotationSpeed, Space.Self);
     }
 
     void Start()
     {
         myRandomObjectPosition = randomObject.GetComponent<Rigidbody>().transform.position;
+        myRandomObjectScale = randomObject.GetComponent<Rigidbody>().transform.localScale;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
+        if (! (playerGas.GetGas() > 0))
+        {
+            gameHasToReset = true;
+        }
+
+        if (gameHasToReset)
+        {
+            RestartButton.SetActive(true);
+
+            if (randomObject.GetComponent<Transform>().localScale != myRandomObjectScale)
+            {
+                playerGas.setGas(100f);
+                gameHasToReset = false;
+                transform.position = new Vector3(0, 0, 0);
+            }
+
+        }
+
         if (Input.GetKey("up") || Input.GetKey("w"))
         {
             leanForwardSlow();
@@ -114,18 +147,18 @@ public class PlayerMovement : MonoBehaviour
             leanRightSlow();
         }
 
-        if (Input.GetKey("space") && (playerGas.GetGas() > 0))
+        if (Input.GetKey("space") && (playerGas.GetGas() > 0) && !gameHasToReset)
         {
             playerGas.decreaseGas();
             relativeFart();
         }
 
-        if (Input.GetKeyDown("space") && (playerGas.GetGas() > 0))
+        if (Input.GetKeyDown("space") && (playerGas.GetGas() > 0) && !gameHasToReset)
         {
             fart.Play();
         }
 
-        if (Input.GetKeyUp("space"))
+        if (Input.GetKeyUp("space") || gameHasToReset)
         {
             fart.Stop();
         }

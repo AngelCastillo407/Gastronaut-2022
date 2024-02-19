@@ -6,9 +6,12 @@ public class Gas : MonoBehaviour
 {
     private float gas = 100f;
 
-    // Normal Gas
-    private float gasDecrease = 0.015f;
+    // Normal Gas (0.015f)
+    private float gasDecrease = 0.025f;
     
+    // Fast Hecking Gas
+    //private float gasDecrease = 0.085f;
+
     // Infinite Gas
     // private float gasDecrease = 0.0001f;
 
