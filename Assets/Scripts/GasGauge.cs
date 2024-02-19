@@ -37,6 +37,7 @@ public class GasGauge : MonoBehaviour
             {
                 playerGas.setGas(100f);
                 gameHasToReset = false;
+                GetComponent<TextMeshPro>().text = playerGas.GetGas().ToString() + "%";
             }
         }
 
@@ -46,6 +47,8 @@ public class GasGauge : MonoBehaviour
             GetComponent<TextMeshPro>().text = playerGas.GetGas().ToString() + "%";
         }
 
+        // Position of Random Object has changed
+        // This means a can of beans has been collected
         if (randomObject.GetComponent<Rigidbody>().transform.position.x != myRandomObjectPosition.x)
         {
             playerGas.addGas(GAS_INCREASE_FROM_BEANS);

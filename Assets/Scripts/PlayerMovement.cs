@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
 
     public bool gameHasToReset = false;
 
+    // Original speed is 0.5f
+    private float rotationSpeed = 2.5f;
+
     //public AudioSource one;
 
     void leanForward()
@@ -74,22 +77,22 @@ public class PlayerMovement : MonoBehaviour
 
     void leanForwardSlow()
     {
-        GetComponent<Rigidbody>().transform.Rotate(1.5f, 0f, 0f, Space.Self);
+        GetComponent<Rigidbody>().transform.Rotate(rotationSpeed, 0f, 0f, Space.Self);
     }
 
     void leanBackwardSlow()
     {
-        GetComponent<Rigidbody>().transform.Rotate(-1.5f, 0f, 0f, Space.Self);
+        GetComponent<Rigidbody>().transform.Rotate(-rotationSpeed, 0f, 0f, Space.Self);
     }
 
     void leanLeftSlow()
     {
-        GetComponent<Rigidbody>().transform.Rotate(0f, 0f, 1.5f, Space.Self);
+        GetComponent<Rigidbody>().transform.Rotate(0f, 0f, rotationSpeed, Space.Self);
     }
 
     void leanRightSlow()
     {
-        GetComponent<Rigidbody>().transform.Rotate(0f, 0f, -1.5f, Space.Self);
+        GetComponent<Rigidbody>().transform.Rotate(0f, 0f, -rotationSpeed, Space.Self);
     }
 
     void Start()
@@ -101,14 +104,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKey("space"))
-        //{
-        //    one.Play();
-        //}
-        //else
-        //{
-        //    one.Stop();
-        //}
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
 
         if (! (playerGas.GetGas() > 0))
         {
@@ -118,13 +117,6 @@ public class PlayerMovement : MonoBehaviour
         if (gameHasToReset)
         {
             RestartButton.SetActive(true);
-            //if (randomObject.GetComponent<Transform>().localScale != myRandomObjectScale)
-            //{
-            //    playerGas.setGas(100f);
-            //    transform.position = new Vector3(0, 0, 0);
-            //    gameHasToReset = false;
-            //    RestartButton.SetActive(false);
-            //}
 
             if (randomObject.GetComponent<Transform>().localScale != myRandomObjectScale)
             {
@@ -132,7 +124,6 @@ public class PlayerMovement : MonoBehaviour
                 gameHasToReset = false;
                 transform.position = new Vector3(0, 0, 0);
             }
-
 
         }
 

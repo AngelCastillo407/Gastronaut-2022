@@ -55,22 +55,21 @@
     <UnityVersion>2022.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\MusicSwapper.cs" />
     <Compile Include="Assets\Scripts\GasGauge.cs" />
     <Compile Include="Assets\Scripts\VictoryCollision.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\OldArrowRotation.cs" />
     <Compile Include="Assets\Scripts\BeansCollision.cs" />
-    <Compile Include="Assets\Scripts\ArrowRotation2.cs" />
     <Compile Include="Assets\Scripts\Gas.cs" />
     <Compile Include="Assets\Scripts\DeathActivated.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonOrbitCamBasic.cs" />
     <Compile Include="Assets\Scripts\FartControllerSpeaker.cs" />
-    <Compile Include="Assets\FartPlayer.cs" />
     <Compile Include="Assets\Scripts\QuitButton.cs" />
     <Compile Include="Assets\Scripts\StartButton.cs" />
     <Compile Include="Assets\Scripts\ArrowRotation.cs" />
     <Compile Include="Assets\Scripts\RevealUI.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\MusicSwapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowRotation2 : MonoBehaviour
+public class OldArrowRotation : MonoBehaviour
 {
     private GasGauge myGasGauge = new GasGauge();
 
