@@ -17,57 +17,10 @@ public class PlayerMovement : MonoBehaviour
     public bool gameHasToReset = false;
 
     // Original speed is 0.5f
-    private float rotationSpeed = 2.5f;
+    // build speed is 2.5f
+    private float rotationSpeed = 0.8f;
 
-    //public AudioSource one;
-
-    void leanForward()
-    {
-        var x = 0;
-        for (x = 0; x < 90; x++) 
-        {
-            GetComponent<Rigidbody>().transform.Rotate(x, 0f, 0f, Space.Self);
-        }
-    }
-
-    void leanBackward()
-    {
-        var x = 0;
-        for (x = 0; x < 90; x++)
-        {
-            GetComponent<Rigidbody>().transform.Rotate(-x, 0f, 0f, Space.Self);
-        }
-    }
-
-    void leanLeft()
-    {
-        var x = 0;
-        for (x = 0; x < 90; x++)
-        {
-            GetComponent<Rigidbody>().transform.Rotate(0f, 0f, x, Space.Self);
-        }
-    }
-
-    void leanRight()
-    {
-        var x = 0;
-        for (x = 0; x < 90; x++)
-        {
-            GetComponent<Rigidbody>().transform.Rotate(0f, 0f, -x, Space.Self);
-        }
-    }
-
-    void fartUp()
-    {
-        // Apply 5 force in y direction
-        GetComponent<Rigidbody>().velocity = new Vector3(0, 2, 0);
-    }
-
-    void teleportFart()
-    {
-        // Teleport to x y z coordinates
-        GetComponent<Rigidbody>().transform.Translate(0, 3, 0);
-    }
+    private int upCounter, downCounter, leftCounter, rightCounter = 0;
 
     void relativeFart()
     {
@@ -75,24 +28,36 @@ public class PlayerMovement : MonoBehaviour
         GetComponent<Rigidbody>().AddRelativeForce(0, 15, 0);
     }
 
-    void leanForwardSlow()
+    void leanForward(int count)
     {
-        GetComponent<Rigidbody>().transform.Rotate(rotationSpeed, 0f, 0f, Space.Self);
+        if (count < 20)
+        {
+            GetComponent<Rigidbody>().transform.Rotate(2.25f, 0f, 0f, Space.Self);
+        }
     }
 
-    void leanBackwardSlow()
+    void leanBackward(int count)
     {
-        GetComponent<Rigidbody>().transform.Rotate(-rotationSpeed, 0f, 0f, Space.Self);
+        if (count < 20)
+        {
+            GetComponent<Rigidbody>().transform.Rotate(-2.25f, 0f, 0f, Space.Self);
+        }
     }
 
-    void leanLeftSlow()
+    void leanLeft(int count)
     {
-        GetComponent<Rigidbody>().transform.Rotate(0f, 0f, rotationSpeed, Space.Self);
+        if (count < 20)
+        {
+            GetComponent<Rigidbody>().transform.Rotate(0f, 0f, 2.25f, Space.Self);
+        }
     }
 
-    void leanRightSlow()
+    void leanRight(int count)
     {
-        GetComponent<Rigidbody>().transform.Rotate(0f, 0f, -rotationSpeed, Space.Self);
+        if (count < 20)
+        {
+            GetComponent<Rigidbody>().transform.Rotate(0f, 0f, -2.25f, Space.Self);
+        }
     }
 
     void Start()
@@ -109,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
             Application.Quit();
         }
 
-        if (! (playerGas.GetGas() > 0))
+        if (!(playerGas.GetGas() > 0))
         {
             gameHasToReset = true;
         }
@@ -127,24 +92,92 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if (Input.GetKey("up") || Input.GetKey("w"))
+        if (upCounter > 0 && upCounter < 20)
         {
-            leanForwardSlow();
+            leanForward(upCounter);
+            upCounter += 1;
         }
 
-        if (Input.GetKey("down") || Input.GetKey("s"))
+        if (downCounter > 0 && downCounter < 20)
         {
-            leanBackwardSlow();
+            leanBackward(downCounter);
+            downCounter += 1;
         }
 
-        if(Input.GetKey("left") || Input.GetKey("a"))
+        if (leftCounter > 0 && leftCounter < 20)
         {
-            leanLeftSlow();
+            leanLeft(leftCounter);
+            leftCounter += 1;
         }
 
-        if (Input.GetKey("right") || Input.GetKey("d"))
+        if (rightCounter > 0 && rightCounter < 20)
         {
-            leanRightSlow();
+            leanRight(rightCounter);
+            rightCounter += 1;
+        }
+
+        if (Input.GetKeyDown("w"))
+        {
+            upCounter += 1;
+        }
+
+        if (Input.GetKeyUp("w"))
+        {
+            upCounter = 0;
+            downCounter = 1;
+        }
+
+        if (Input.GetKeyDown("s"))
+        {
+            downCounter += 1;
+        }
+
+        if (Input.GetKeyUp("s"))
+        {
+            downCounter = 0;
+            upCounter = 1;
+        }
+
+        if (Input.GetKeyDown("a"))
+        {
+            leftCounter += 1;
+        }
+
+        if (Input.GetKeyUp("a"))
+        {
+            leftCounter = 0;
+            rightCounter = 1;
+        }
+
+        if (Input.GetKeyDown("d"))
+        {
+            rightCounter += 1;
+        }
+
+        if (Input.GetKeyUp("d"))
+        {
+            rightCounter = 0;
+            leftCounter = 1;
+        }
+
+        if (upCounter == 20)
+        {
+            upCounter = 0;
+        }
+
+        if (downCounter == 20)
+        {
+            downCounter = 0;
+        }
+
+        if (leftCounter == 20)
+        {
+            leftCounter = 0;
+        }
+
+        if (rightCounter == 20)
+        {
+            rightCounter = 0;
         }
 
         if (Input.GetKey("space") && (playerGas.GetGas() > 0) && !gameHasToReset)

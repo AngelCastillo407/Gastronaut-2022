@@ -57,7 +57,7 @@ public class ThirdPersonOrbitCamBasic : MonoBehaviour
 	void Update()
 	{
         // Only if player holds left click
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && false)
         {
             // Get mouse movement to orbit the camera.
             // Mouse:

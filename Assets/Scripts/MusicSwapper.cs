@@ -16,7 +16,7 @@ public class MusicSwapper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0) && !didSwap)
+        if (Input.anyKey && !didSwap)
         {
             one.Stop();
             two.Play();

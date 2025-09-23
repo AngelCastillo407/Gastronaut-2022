@@ -33,11 +33,14 @@ public class GasGauge : MonoBehaviour
 
         if (gameHasToReset)
         {
+            // Scale of random object as been changed
+            // This means the player has died
             if (randomObject.GetComponent<Transform>().localScale != myRandomObjectScale)
             {
                 playerGas.setGas(100f);
                 gameHasToReset = false;
                 GetComponent<TextMeshPro>().text = playerGas.GetGas().ToString() + "%";
+                //myRandomObjectScale = randomObject.GetComponent<Rigidbody>().transform.localScale;
             }
         }
 

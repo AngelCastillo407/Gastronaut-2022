@@ -27,11 +27,10 @@ public class StartButton : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.anyKey)
         {
             SceneManager.LoadScene(gameStartScene);
         }
-        //SceneManager.LoadScene(gameStartScene);
     }
 
 
